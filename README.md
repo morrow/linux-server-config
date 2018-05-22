@@ -13,12 +13,15 @@
 - `nginx 1.10.3`
 - `pip 10.0.1`
 - `postgresql 9.5.12`
+- `gunicorn 19.8.1`
 
 ### Configuration changes made
+- Update securiy group policy on Route 53 to allow for incoming TCP connections on 80, 443, 123, and 786
 - Create user group `web`
 - Add `ubuntu` to `web` group
 - Create /var/www folder owned by `ubuntu.web`
 - Add configuration for nginx at `/etc/nginx/sites-enabled/catalog`
+- Add unit file for systemd at /etc/systemd/system/catalog.service for WSGI
 - Create user `grader`
 - Add `grader` user to `sudoers`
 - Generate SSH keypair for user `grader`
@@ -33,6 +36,3 @@
 - [https://aws.amazon.com/ec2](https://aws.amazon.com/ec2) for virtual server provisioning and management.
 - [https://github.com/morrow/catalog](https://github.com/morrow/catalog) for application logic.
 
-
-    
- 

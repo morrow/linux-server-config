@@ -1,14 +1,14 @@
 # Linux Server Config
 
-## i. IP Address and SSH Port
+## IP Address and SSH Port
 [34.234.73.115](http://34.234.73.115)
 
 786
 
-## ii. URL
+## URL
 [http://catalog.ninja](http://catalog.ninja)
 
-## iii. Software installed and configuration changes made
+## Software installed and configuration changes made
 ### Software installed
 - `nginx 1.10.3`
 - `pip 10.0.1`
@@ -26,6 +26,8 @@
 - Add `grader` user to `sudoers`
 - Generate SSH keypair for user `grader`
 - Add SSH public key to /home/grader/.ssh/authorized_keys
+- Update ufw to allow only select ports
+- Enable ufw
 - Create Postgres user `catalog` using psql
 - Update password for Postgres user `catalog`
 - Create database `catalog`
